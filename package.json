@@ -1,5 +1,5 @@
 {
-  "name": "graphql-voyager",
+  "name": "@novvum/graphql-voyager",
   "version": "1.0.0-rc.26",
   "description": "GraphQL introspection viewer",
   "main": "dist/voyager.lib.js",

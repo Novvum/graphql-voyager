@@ -3,7 +3,7 @@ import * as _ from 'lodash';
 import { createSelector } from 'reselect';
 import {
   buildClientSchema,
-  introspectionFromSchema,
+  // introspectionFromSchema,
   lexicographicSortSchema,
   IntrospectionSchema,
   IntrospectionType,
@@ -238,7 +238,7 @@ function getSchema(introspection: any, sortByAlphabet: boolean, skipRelay: boole
     schema = lexicographicSortSchema(schema);
   }
 
-  introspection = introspectionFromSchema(schema, { descriptions: true });
+  introspection = introspection.data; // introspectionFromSchema(schema, { descriptions: true });
   let simpleSchema = simplifySchema(introspection.__schema);
 
   assignTypesAndIDs(simpleSchema);
